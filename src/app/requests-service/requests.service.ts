@@ -16,29 +16,12 @@ export class RequestsService {
 
   constructor(private http: HttpClient) {}
 
-  public getThumb() {}
-
-  public getNoticia(): Subscription {
+  public async getThumb(): Promise<NoticiaThumb[]> {
     return this.http
       .get(this.urlThumb)
-
-      .subscribe((data: NoticiaThumb[]) => {
-        data.forEach((noticia: NoticiaThumb) => {
-          this.getFullNoticia(noticia).then(data => {
-            console.log(data);
-            return data;
-          });
-        });
-      });
-  }
-
-  private getFullNoticia(noticiaThumb: NoticiaThumb) {
-    return this.http
-      .get(this.urlFullNoticia + noticiaThumb.slug)
-      .forEach((data: FullNoticia) => {
-        console.log(data);
-        data === undefined ? (data = null) : data;
-        return data;
+      .toPromise()
+      .then((noticiaThumb: NoticiaThumb[]) => {
+        return noticiaThumb;
       });
   }
 }
