@@ -1,13 +1,17 @@
 {
-  "name": "smite-service",
+  "name": "",
   "version": "0.0.0",
+  "config": {
+    "name": ""
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "component": "ng g c components/%npm_package_config_name% --spec false --skip-import "
   },
   "private": true,
   "dependencies": {

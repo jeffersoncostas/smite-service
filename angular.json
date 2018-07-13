@@ -8,7 +8,9 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "styleext": "scss"
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -23,7 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -72,7 +74,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -123,5 +125,10 @@
       }
     }
   },
-  "defaultProject": "smite-service"
+  "defaultProject": "smite-service",
+  "schematics": {
+    "@schematics/angular:components": {
+      "styleext": "scss"
+    }
+  }
 }

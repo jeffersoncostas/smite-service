@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { RequestsService } from '../requests-service/requests.service';
-import { NoticiaThumb } from '../noticia-model/noticia-thumb.model';
+import { RequestsService } from '../../requests-service/requests.service';
+import { NoticiaThumb } from '../../noticia-model/noticia-thumb.model';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   public noticiasThumb: NoticiaThumb[];

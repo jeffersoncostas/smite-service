@@ -1,0 +1,13 @@
+<section>
+    <div class="card-feed" *ngFor="let noticia of listaNoticias">
+        <header class="card-feed__header">
+            <div class="card-feed__header__image" [ngStyle]="{ 'background-image': 'url('+ noticia.featured_image +')' } "></div>
+
+        </header>
+        <title>
+
+        </title>
+        {{noticia.title}}
+    </div>
+
+</section>

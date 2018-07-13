@@ -4,11 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { RequestsService } from './requests-service/requests.service';
-import { HomeComponent } from './home/home.component';
 import { RoutesModule } from './routes/routes.module';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, RoutesModule, HttpClientModule],
   providers: [RequestsService],
   bootstrap: [AppComponent]

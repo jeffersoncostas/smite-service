@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NoticiaThumb } from '../noticia-model/noticia-thumb.model';
 import { FullNoticia } from '../noticia-model/full-noticia.model';
-import { Subscription } from '../../../node_modules/rxjs';
+import { Subscription } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
